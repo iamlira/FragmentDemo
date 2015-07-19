@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/main_tab_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="2.0dip" >
+
+        <RadioButton
+            android:id="@+id/doc_order"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/doc_order_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_border_size_xsmall"
+            android:paddingTop="@dimen/dimen_border_size_small"
+            android:text="@string/doc_order"
+            android:textColor="@drawable/doc_textcolor"
+            android:textSize="@dimen/dimen_font_size_small" />
+
+        <RadioButton
+            android:id="@+id/doc_my_patient"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@drawable/doc_patient_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_border_size_xsmall"
+            android:paddingTop="@dimen/dimen_border_size_small"
+            android:text="@string/doc_my_patient"
+            android:textColor="@drawable/doc_textcolor"
+            android:textSize="@dimen/dimen_font_size_small" />
+
+        <RadioButton
+            android:id="@+id/doc_my"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@drawable/doc_my_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_border_size_xsmall"
+            android:paddingTop="@dimen/dimen_border_size_small"
+            android:text="@string/doc_my"
+            android:textColor="@drawable/doc_textcolor"
+            android:textSize="@dimen/dimen_font_size_small" />
+    </RadioGroup>
+
+    <com.juanliu.buyi.widget.CustomViewPager
+        android:id="@+id/custom_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_tab_group" >
+    </com.juanliu.buyi.widget.CustomViewPager>
+
+</RelativeLayout>
